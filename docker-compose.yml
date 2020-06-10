@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  postgresql:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=mypguser
+      - POSTGRES_PASSWORD=secret-sshhhh
+    ports:
+      - 5432:5432
