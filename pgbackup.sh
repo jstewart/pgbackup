@@ -47,7 +47,7 @@ aws s3 cp $output_file.gz $S3_BUCKET
 deletions=$(aws s3 ls $S3_BUCKET |  awk 'NR>3' | awk '{print $4}')
 for f in $deletions
 do
-    echo "aws s3 rm $S3_BUCKET$f"
+    aws s3 rm $S3_BUCKET$f
 done
 
 rm $output_file.gz
