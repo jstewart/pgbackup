@@ -23,7 +23,7 @@ Set up the database (may need to adjust ports in docker-compose.yml):
 
     docker-compose up -d
     
-    cp pgpass ~/.pgpass && chmod 600 ~/pgpass 
+    cp pgpass ~/.pgpass && chmod 600 ~/.pgpass 
     psql -h localhost -p 5432 -U mypguser
     mypguser=# create database users;
     CREATE DATABASE
